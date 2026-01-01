@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de bienvenida</title>
+    <link rel="stylesheet" href="ChatEstilo.css">
+</head>
+<body>
+    <!-- Boton para regresar al menu -->
+    <button id="btnRegresar" class="btn-regresar">
+        &#8592; Regresar </button>
+    <div class="chat-container">
+        <img src="ToroLogo.png" alt="LogodelChat" class="logochat">
+        <h2>Bienvenido al Chat de la Institución</h2>
+
+        <div class="email-list">
+            <p class="email-item" onclick="selectEmail('mariaisabelperezgarcia0991@gmail.com')">mariaisabelperezgarcia0991@gmail.com</p>
+            <p class="email-item" onclick="selectEmail('patoloco22.34@gmail.com')">patoloco22.34@gmail.com</p>
+            <p class="email-item" onclick="selectEmail('eragma05@gmail.com')">eragma05@gmail.com</p>
+        </div>
+
+        <!-- Campo oculto para guardar el correo destino -->
+        <input type="hidden" id="userInput">
+
+        <div class="input-container">
+            <textarea id="mensajeInput" placeholder="Escribe tu mensaje..." class="input-Escritura"></textarea>
+            <button id="sendButton" class="send-button">
+            <img src="enviar-mensaje1.png" style="cursor:pointer;">
+        </button>
+    </div>
+
+    <!-- Modal para capturar correo del usuario -->
+    <div id="correoModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span onclick="cerrarModal()" style="float:right;cursor:pointer;">&times;</span>
+    <h3>Ingresa tu correo electrónico</h3>
+    <input type="email" id="correoUsuario" placeholder="ejemplo@correo.com" required>
+    <button onclick="confirmarCorreo()">Continuar</button>
+  </div>
+</div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("foeWE-G35TYAQFCHM"); // Tu public key
+        })();
+    </script>
+    <script src="Funciones.js"></script>
+</body>
+</html>

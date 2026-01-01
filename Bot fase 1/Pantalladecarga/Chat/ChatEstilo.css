@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'TecFont';
+    src: url('Montserrat-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: TecFont, sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+.container{
+    text-align: center;
+}
+
+.logochat{
+    width: 250px;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+h2{
+    font-family: TecFont, sans-serif;
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+    z-index: 2;
+}
+
+.input-Escritura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    max-width: 90%;
+    margin: 0 auto;
+    background: transparent;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.input-Escritura {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #D9D9D9;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    max-width: 90%;
+    margin: 0 auto;
+    background: #D9D9D9;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.send-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.send-icon{
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    /* color: #007bff; Azul del ícono */
+    transition: 0.3s;
+    width: 35px;
+    height: 35px;
+
+}
+
+.send-button:hover{
+    color: #6d6f70; /* Azul más oscuro al pasar el cursor */
+}
+
+.email-list {
+    width: 500px;
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.email-item {
+    background-color: #D9D9D9;
+    color: #333;
+    font-family: TecFont, sans-serif;
+    padding: 12px 18px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s;
+    border-left: 5px solid #1B75D1; /* línea azul como estilo chat */
+}
+
+.email-item:hover {
+    background-color: #D9E8FF;
+    transform: scale(1.03);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: #121111;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #D9E8FF;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1B75D1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Estilo del botón regresar */
+.btn-regresar {
+    position: absolute; /* Se fija en la pantalla independientemente del resto */
+    top: 20px;
+    left: 20px;
+    background-color: #000066; /* Mismo azul que tus bordes */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'TecFont', sans-serif;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 1000; /* Asegura que quede encima de todo */
+}
+.btn-regresar:hover {
+    background-color: #000066; /* Un azul un poco más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de crecimiento leve */
+}

@@ -1,0 +1,107 @@
+/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    /* Usamos un gradiente radial para imitar el fondo */
+    background: radial-gradient(circle, #1e4a9c, #0d2c5f);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Encabezado --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 130px; /* Ajusta el tamaño de tu logo */
+}
+
+/* --- Mascota --- */
+.mascot-container {
+    text-align: center;
+    margin-bottom: 40px; /* Espacio hacia los botones */
+    margin-top: -60px;
+}
+
+.mascot {
+    width: 320px; 
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+/* --- Rejilla de Botones --- */
+.button-grid {
+    display: grid;
+    /* Creamos 3 columnas flexibles */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* Espacio entre las columnas */
+}
+
+.button-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los botones de una misma columna */
+}
+
+/* --- Estilo de Botones --- */
+.btn {
+    display: block;
+    background-color: #1a5cce; /* Color azul del botón */
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 12px; /* Esquinas redondeadas */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #2a6ddf; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* Estilo específico para el botón de regresar */
+.btn-return {
+    padding: 10px 25px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* --- Responsividad para móviles --- */
+@media (max-width: 768px) {
+    .button-grid {
+        /* En pantallas pequeñas, apila las columnas */
+        grid-template-columns: 1fr;
+        gap: 15px; /* Reducimos el espacio */
+    }
+
+    .button-column {
+        gap: 10px; /* Reducimos el espacio entre botones */
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
