@@ -1,4 +1,4 @@
-# Bot Institucional de Atención Educativa
+# Bot Institucional: Automatizacion de Servicios Escolares
 
 Este proyecto consiste en un **bot institucional basado en reglas**, diseñado para brindar respuestas rápidas a las preguntas más frecuentes dentro de una institución educativa.
 
