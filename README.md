@@ -44,7 +44,7 @@ para que despues la institucion se ponga en contacto con la persona que tiene el
 ## 👤 Autor
 
 Maria Isabel Duran Garcia  
-Ibstituto Tecnologico de México campus Salvatierra (ITESS)   
+Instituto Tecnologico de México campus Salvatierra (ITESS)   
 
 ---
 
